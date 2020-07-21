@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Welcome Security Config</title>
+</head>
+<body>
+
+<h1>Welcome to Spring Security</h1>
+
+<div th:fragement="logout" class ="logout"
+sec:auhorize =  "isAuthenticated()">
+User's name:<span sec:authentication="username"></span>
+<br>
+Roles:<span sec:authentication="principal.authorities"></span>
+<br>
+   <div>
+   <form action="#" th:action = "@{/logout}" method="post">
+        <input type = "submit" value="Logout" />
+   </form>
+   </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Secured</title>
+</head>
+<body>
+
+<h1>This is a secured page</h1>
+<p><a href="/" th:href="@{/}">Back to home page</a></p>
+<p><a href="/manager" th:href="@{/manager}">Manger Page</a></p>
+
+<p><a href="/owner" th:href="@{/owner}">Owner Page</a></p>
+<p><a href="/employee" th:href="@{/employee}">Employee Page</a></p>
+ <p><a href="/" th:href="@{/logout}">Log out</a></p>
+
+
+
+Name :<p th:text="${hi}">
+Roles
+<ul>
+<li th:each="role:${roles}" th:text="${role}"></li>
+</ul>
+</body>
+</html>
